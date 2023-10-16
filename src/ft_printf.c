@@ -6,7 +6,7 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 20:19:01 by sezequie          #+#    #+#             */
-/*   Updated: 2023/10/15 20:19:53 by sezequie         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:39:42 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	print_check(char s, va_list *args, int *len, int *i)
 	if (s == 's')
 		ft_putstr(va_arg(*args, char *), len);
 	else if (s == 'd' || s == 'i')
-		ft_number(va_arg(*args, int), len);
+		ft_num(va_arg(*args, int), len);
 	else if (s == 'u')
 		ft_unsigned_int(va_arg(*args, unsigned int), len);
 	else if (s == 'x')

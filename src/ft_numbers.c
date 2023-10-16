@@ -6,13 +6,13 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 20:23:50 by sezequie          #+#    #+#             */
-/*   Updated: 2023/10/15 20:25:00 by sezequie         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:39:58 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_number(int number, int *len)
+void	ft_num(int number, int *len)
 {
 	if (number == -2147483648)
 	{
@@ -23,13 +23,13 @@ void	ft_number(int number, int *len)
 	if (number < 0)
 	{
 		ft_putchar('-', len);
-		ft_number(number * -1, len);
+		ft_num(number * -1, len);
 	}
 	else
 	{
 		if (number > 9)
 		{
-			ft_number(number / 10, len);
+			ft_num(number / 10, len);
 		}
 		ft_putchar(number % 10 + '0', len);
 	}
