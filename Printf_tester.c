@@ -6,7 +6,7 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 20:29:47 by sezequie          #+#    #+#             */
-/*   Updated: 2023/10/16 21:40:46 by sezequie         ###   ########.fr       */
+/*   Updated: 2023/10/18 01:58:43 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,19 @@
 
 int main()
 {
-	// Test cases
-	char c = 'A';
-	char *str = "Hello, world!";
-	int d = 42;
-	int di = 42.42;
-	unsigned int u = 99;
-	void *ptr = (void *)&d;
+	char c;
+	char *str;
+	int d;
+	int di;
+	unsigned int u;
+	void *ptr;
 
+	c = 'a';
+	str = "Hello World!";
+	d = 42;
+	di = -42;
+	u = 42;
+	ptr = &d;
 	printf("Testing ft_printf:\n");
 	ft_printf("Character: %c\n", c);
 	ft_printf("String: %s\n", str);
@@ -33,7 +38,6 @@ int main()
 	ft_printf("Hex (uppercase): %X\n", u);
 	ft_printf("Pointer: %p\n", ptr);
 	ft_printf("Percent: %%\n");
-
 	printf("\nTesting printf (original):\n");
 	printf("Character: %c\n", c);
 	printf("String: %s\n", str);
@@ -42,8 +46,7 @@ int main()
 	printf("Unsigned: %u\n", u);
 	printf("Hex (lowercase): %x\n", u);
 	printf("Hex (uppercase): %X\n", u);
-	printf("Pointer: %p\n", ptr); // Pass 'ptr' as an argument
+	printf("Pointer: %p\n", ptr);
 	printf("Percent: %%\n");
-
-	return 0;
+	return (0);
 }
