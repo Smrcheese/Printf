@@ -6,7 +6,7 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 20:29:47 by sezequie          #+#    #+#             */
-/*   Updated: 2023/10/18 01:58:43 by sezequie         ###   ########.fr       */
+/*   Updated: 2023/10/18 13:40:57 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ int main()
 
 	c = 'a';
 	str = "Hello World!";
-	d = 42;
-	di = -42;
-	u = 42;
+	d = -42;
+	di = 42;
+	u = 4294967295;
 	ptr = &d;
 	printf("Testing ft_printf:\n");
 	ft_printf("Character: %c\n", c);
