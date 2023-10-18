@@ -6,7 +6,7 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 20:19:01 by sezequie          #+#    #+#             */
-/*   Updated: 2023/10/16 21:39:42 by sezequie         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:51:34 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,21 @@
 static void	print_check(char s, va_list *args, int *len, int *i)
 {
 	if (s == 's')
-		ft_putstr(va_arg(*args, char *), len);
+		fputstr(va_arg(*args, char *), len);
 	else if (s == 'd' || s == 'i')
-		ft_num(va_arg(*args, int), len);
+		fnum(va_arg(*args, int), len);
 	else if (s == 'u')
-		ft_unsigned_int(va_arg(*args, unsigned int), len);
+		funsigned_int(va_arg(*args, unsigned int), len);
 	else if (s == 'x')
-		ft_hexadecimal(va_arg(*args, unsigned int), len, 'x');
+		fhexadecimal(va_arg(*args, unsigned int), len, 'x');
 	else if (s == 'X')
-		ft_hexadecimal(va_arg(*args, unsigned int), len, 'X');
+		fhexadecimal(va_arg(*args, unsigned int), len, 'X');
 	else if (s == 'p')
-		ft_pointer(va_arg(*args, size_t), len);
+		fpointer(va_arg(*args, size_t), len);
 	else if (s == 'c')
-		ft_putchar(va_arg(*args, int), len);
+		fputchar(va_arg(*args, int), len);
 	else if (s == '%')
-		ft_putchar('%', len);
+		fputchar('%', len);
 	else
 		(*i)--;
 }
@@ -53,7 +53,7 @@ int	ft_printf(const char *string, ...)
 		}
 		else
 		{
-			ft_putchar((char)string[i], &len);
+			fputchar((char)string[i], &len);
 			i++;
 		}
 	}

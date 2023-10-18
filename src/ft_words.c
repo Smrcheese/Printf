@@ -6,19 +6,19 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 20:23:03 by sezequie          #+#    #+#             */
-/*   Updated: 2023/10/15 20:24:53 by sezequie         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:52:32 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_putchar(char chr, int *len)
+void	fputchar(char chr, int *len)
 {
 	write(1, &chr, 1);
 	(*len)++;
 }
 
-void	ft_putstr(char *args, int *len)
+void	fputstr(char *args, int *len)
 {
 	size_t	i;
 
@@ -31,7 +31,7 @@ void	ft_putstr(char *args, int *len)
 	}
 	while (args[i] != '\0')
 	{
-		ft_putchar(args[i], len);
+		fputchar(args[i], len);
 		i++;
 	}
 }

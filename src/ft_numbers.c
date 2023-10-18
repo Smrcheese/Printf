@@ -6,13 +6,13 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 20:23:50 by sezequie          #+#    #+#             */
-/*   Updated: 2023/10/16 21:39:58 by sezequie         ###   ########.fr       */
+/*   Updated: 2023/10/16 21:53:51 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	ft_num(int number, int *len)
+void	fnum(int number, int *len)
 {
 	if (number == -2147483648)
 	{
@@ -22,29 +22,29 @@ void	ft_num(int number, int *len)
 	}
 	if (number < 0)
 	{
-		ft_putchar('-', len);
-		ft_num(number * -1, len);
+		fputchar('-', len);
+		fnum(number * -1, len);
 	}
 	else
 	{
 		if (number > 9)
 		{
-			ft_num(number / 10, len);
+			fnum(number / 10, len);
 		}
-		ft_putchar(number % 10 + '0', len);
+		fputchar(number % 10 + '0', len);
 	}
 }
 
-void	ft_unsigned_int(unsigned int number, int *len)
+void	funsigned_int(unsigned int number, int *len)
 {
 	if (number > 9)
 	{
-		ft_unsigned_int(number / 10, len);
+		funsigned_int(number / 10, len);
 	}
-	ft_putchar(number % 10 + '0', len);
+	fputchar(number % 10 + '0', len);
 }
 
-void	ft_hexadecimal(unsigned int number, int *len, char choose)
+void	fhexadecimal(unsigned int number, int *len, char choose)
 {
 	char	str[25];
 	char	*hexa_base;
@@ -58,7 +58,7 @@ void	ft_hexadecimal(unsigned int number, int *len, char choose)
 	i = 0;
 	if (number == 0)
 	{
-		ft_putchar('0', len);
+		fputchar('0', len);
 		return ;
 	}
 	while (number != 0)
@@ -68,10 +68,10 @@ void	ft_hexadecimal(unsigned int number, int *len, char choose)
 		i++;
 	}
 	while (i--)
-		ft_putchar(str[i], len);
+		fputchar(str[i], len);
 }
 
-void	ft_pointer(size_t pointer, int *len)
+void	fpointer(size_t pointer, int *len)
 {
 	char	str[25];
 	int		i;
@@ -95,6 +95,6 @@ void	ft_pointer(size_t pointer, int *len)
 	while (i)
 	{
 		i--;
-		ft_putchar(str[i], len);
+		fputchar(str[i], len);
 	}
 }
