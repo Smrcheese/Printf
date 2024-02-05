@@ -6,7 +6,7 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 20:29:47 by sezequie          #+#    #+#             */
-/*   Updated: 2023/10/18 13:40:57 by sezequie         ###   ########.fr       */
+/*   Updated: 2024/02/05 18:59:27 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int main()
 	printf("\nTesting printf (original):\n");
 	printf("Character: %c\n", c);
 	printf("String: %s\n", str);
-	printf("Decimal: %d\n", d);
+	printf("Decimal: %d\n", di);
 	printf("Integer: %i\n", d);
 	printf("Unsigned: %u\n", u);
 	printf("Hex (lowercase): %x\n", u);
