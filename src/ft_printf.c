@@ -6,7 +6,7 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 20:19:01 by sezequie          #+#    #+#             */
-/*   Updated: 2023/10/18 02:35:23 by sezequie         ###   ########.fr       */
+/*   Updated: 2024/02/09 01:13:36 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,3 +60,43 @@ int	ft_printf(const char *string, ...)
 	va_end(args);
 	return (len);
 }
+
+/*
+int main()
+{
+	char c;
+	char *str;
+	int d;
+	int di;
+	unsigned int u;
+	void *ptr;
+
+	c = 'a';
+	str = "Hello World!";
+	d = -42;
+	di = 42;
+	u = 4294967295;
+	ptr = &d;
+	printf("Testing ft_printf:\n");
+	ft_printf("Character: %c\n", c);
+	ft_printf("String: %s\n", str);
+	ft_printf("Decimal: %d\n", di);
+	ft_printf("Integer: %i\n", d);
+	ft_printf("Unsigned: %u\n", u);
+	ft_printf("Hex (lowercase): %x\n", u);
+	ft_printf("Hex (uppercase): %X\n", u);
+	ft_printf("Pointer: %p\n", ptr);
+	ft_printf("Percent: %%\n");
+	printf("\nTesting printf (original):\n");
+	printf("Character: %c\n", c);
+	printf("String: %s\n", str);
+	printf("Decimal: %d\n", di);
+	printf("Integer: %i\n", d);
+	printf("Unsigned: %u\n", u);
+	printf("Hex (lowercase): %x\n", u);
+	printf("Hex (uppercase): %X\n", u);
+	printf("Pointer: %p\n", ptr);
+	printf("Percent: %%\n");
+	return (0);
+}
+*/
