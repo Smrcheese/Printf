@@ -6,7 +6,7 @@
 /*   By: sezequie <sezequie@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 20:19:01 by sezequie          #+#    #+#             */
-/*   Updated: 2024/02/09 01:13:36 by sezequie         ###   ########.fr       */
+/*   Updated: 2024/02/17 00:55:15 by sezequie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,9 @@ int	ft_printf(const char *string, ...)
 }
 
 /*
+
+#include <stdio.h>
+
 int main()
 {
 	char c;
